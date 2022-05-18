@@ -1,0 +1,28 @@
+<div class="buttons-landing" *ngIf="typeLanding === 'landing'">
+    <div class="row col-md-12">
+        <div class="series-landing col-md-6">
+            <img alt="" class="img-list-landing" (click)="changeProgramType('series')"
+                src="../../assets/series.png">
+            <button class="title-series-landing btn" type="button" (click)="changeProgramType('series')">series</button>
+        </div>
+        <div class="movies-landing col-md-6">
+            <img alt="" class="img-list-landing" (click)="changeProgramType('movies')"
+                src="../../assets/movies.png">
+            <button class="title-movies-landing btn" type="button" (click)="changeProgramType('movies')">movies</button>
+        </div>
+    </div>
+</div>
+
+<div class="button-change-type" *ngIf="typeLanding === 'series' || typeLanding === 'movies'">
+    <button class="title-series btn" type="button" (click)="changeProgramType('series')"><img class="img-icon-series" src="../../assets/icon-series.png" usemap="...">series</button>
+    <button class="title-movies btn" type="button" (click)="changeProgramType('movies')"><img class="img-icon-movies" src="../../assets/icon-movies.png" usemap="...">movies</button>
+    <button class="title-filter btn" type="button" (click)="onClickFilter()"><img class="img-icon-filters" src="../../assets/icon-filter.png" usemap="...">filters</button>
+</div>
+
+<div *ngIf="typeLanding === 'series'">
+    <app-series [typeList]="typeLanding"></app-series>
+</div>
+
+<div *ngIf="typeLanding === 'movies'">
+    <app-movies [typeList]="typeLanding"></app-movies>
+</div>

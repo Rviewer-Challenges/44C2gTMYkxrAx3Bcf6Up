@@ -1,0 +1,159 @@
+
+// variables
+$secondary: #F2994A;
+$standard: #155799;
+$white: #F1F2F2;
+$transition: all 0.25s ease-in-out;
+
+// mixin
+@mixin mybutton($color_1, $color_2) {
+  width: 250px;
+  margin: 10px;
+  // border: 2px solid $color_1;
+  padding: 6px 24px;
+  font-size: 1.15em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+	color: $color_1;
+  background-color: $color_2;
+	transition: $transition;
+	&:hover {
+		background-color: $color_1;
+		color: $color_2;
+	}
+	&:active {
+		background-color: $color_1;
+		color: $color_2;
+		box-shadow: none;
+	}
+	&:focus, &:active:focus {
+		background-color: $color_1;
+		color: $color_2;
+		outline: 5px auto $color_1;
+	}
+	&:visited {
+		background-color: $color_1;
+	}
+}
+
+// styles
+* {
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+body {
+  background-color: #dedede;
+}
+
+.btn {
+  @include mybutton($standard, $white);
+}
+
+.btn-secondary {
+  @include mybutton($secondary, $white);
+}
+
+img.img-list-landing {
+    width: 400px;
+    cursor: pointer;
+}
+
+.series-landing {
+	display: grid;
+  margin-right: -124px;
+  margin-left: 68px;
+}
+
+.movies-landing {
+	display: grid;
+}
+
+.buttons-landing {
+    display: flex;
+    margin-top: 142px;
+}
+button.title-movies-landing.btn {
+    width: 402px;
+    margin-left: 0px;
+    background-color: red;
+    color: white;
+}
+button.title-series-landing.btn {
+    width: 402px;
+    margin-left: 0px;
+    background-color: red;
+    color: white;
+}
+.img-list-landing:hover {
+	opacity: 0.5;
+}
+button.title-filter.btn {
+    background-color: black;
+    color: white;
+    height: 54px;
+    margin-left: 117px;
+}
+button.title-filter.btn:hover {
+    background-color: red;
+    color: white;
+    height: 54px;
+    margin-left: 117px;
+}
+.title-series.btn {
+  width: 250px;
+  margin: 10px;
+  padding: 6px 24px;
+  font-size: 1.15em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  transition: all 0.25s ease-in-out;
+}
+.title-movies.btn {
+  width: 250px;
+  margin: 10px;
+  padding: 6px 24px;
+  font-size: 1.15em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  transition: all 0.25s ease-in-out;
+}
+
+.title-series.btn:hover {
+  width: 250px;
+  margin: 10px;
+  padding: 6px 24px;
+  font-size: 1.15em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: white;
+  background-color: red;
+  transition: all 0.25s ease-in-out;
+}
+.title-movies.btn:hover {
+  width: 250px;
+  margin: 10px;
+  padding: 6px 24px;
+  font-size: 1.15em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: white;
+  background-color: red;
+  transition: all 0.25s ease-in-out;
+}
+img.img-icon-series {
+  margin-bottom: 7px;
+  margin-right: 10px;
+}
+img.img-icon-movies {
+  margin-bottom: 7px;
+  margin-right: 10px;
+}
+img.img-icon-filters {
+  margin-bottom: 3px;
+  margin-right: 10px;
+}

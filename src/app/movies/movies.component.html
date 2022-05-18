@@ -1,0 +1,27 @@
+<div class="filter-date" *ngIf="isFilter">
+    <p class="p-name-filter">Name</p>
+    <input class="input-filter-name" placeholder="Name" type="text" (keyup)="keyEvent($event)">
+  </div>
+  
+  <div class="container-title-type row">
+    <h2 class="title-type col-md-8">Popular {{typeProgram}}</h2>
+    <h4 class="title-pag col-md-2">Page {{numberPag}}</h4>
+  </div>
+  
+  <ul>
+    <li class="card card-list" style="width: 18rem;" *ngFor="let list of drawListData">
+      <img src={{list.images.PosterArt.url}} class="card-img-top" alt="...">
+      <div class="card-body info">
+        <h4 class="title-card-text">{{list.title}}</h4>
+        <p class="card-text-year">{{list.releaseYear}}</p>
+        <p class="card-text-description">{{list.description}}</p>
+      </div>
+    </li>
+  </ul>
+  
+  <nav aria-label="...">
+    <ul class="paginations">
+      <li class="page-item" *ngFor="let pag of pagination"><button class="page-link" (click)="clickPag(pag[0], pag[1])">{{pag[1]}}</button></li>
+    </ul>
+  </nav>
+  

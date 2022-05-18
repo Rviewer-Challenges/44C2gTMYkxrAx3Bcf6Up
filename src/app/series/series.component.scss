@@ -1,0 +1,66 @@
+img.img-list {
+    width: 200px;
+}
+.filter-date {
+    display: flex;
+    height: 45px;
+    padding-left: 111px;
+    width: 100%;
+    background-color: red;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.container-calendar {
+    margin-left: 38px;
+}
+h2.title-type {
+    color: white;
+    margin-top: 21px;
+    text-align: initial;
+    margin-left: 60px;
+}
+.input-filter-name  {
+    width: 401px;
+    border-radius: 15px 15px 15px 15px;
+    padding-left: 10px;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.card-list .info {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000,endColorstr=#50000000);
+    width: 300px;
+    color: #FFF;
+    padding: 10px;
+}
+p.p-name-filter {
+    margin-top: 1px;
+    margin-right: 15px;
+}
+li:hover .info {
+    display: block;
+}
+.card-list {
+    display: inline-flex !important;
+    margin-right: 34px;
+    margin-bottom: 34px;
+}
+ul.paginations {
+    display: flex;
+    margin-left: 34%;
+}
+.container-title-type{
+    display: flex;
+}
+.title-pag {
+    color: white;
+    margin-top: 28px;
+    margin-left: 74px;
+}
